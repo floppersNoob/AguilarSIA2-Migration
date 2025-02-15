@@ -21,10 +21,6 @@ return new class extends Migration
             $table->foreign('reservation_id')->references('reservation_id')->on('reservation')->onDelete('cascade')->onUpdate('cascade');
         });
     }
-
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
         Schema::dropIfExists('payment');
